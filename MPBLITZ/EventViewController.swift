@@ -39,12 +39,9 @@ class EventViewController: UIViewController {
         self.descriptionLabel.text = self.event?.eventDescription
         
         var rules = ""
-        var count = 1
         
-        for item in (self.event?.rulesAndRegulations)! {
-            
-            rules += item.value + "\n\n"
-            count += 1
+        for (_, v) in (self.event?.rulesAndRegulations.sorted(by: {$0.0 < $1.0}))! {
+            rules += v + "\n\n"
             
         }
         
@@ -68,4 +65,6 @@ class EventViewController: UIViewController {
     }
     */
 
+    
 }
+

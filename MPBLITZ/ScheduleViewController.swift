@@ -13,6 +13,7 @@ var selectedIndex: Int = 0
 
 class ScheduleViewController: UIViewController {
     
+    @IBOutlet weak var tapImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
@@ -43,14 +44,25 @@ class ScheduleViewController: UIViewController {
         
         DataManager().getEvents(completion: getData, inCaseOfError: inCaseOfError)
         
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.tapImageView.startBlink()
+        
         self.sortEventsButton.setTitle(self.titles[selectedIndex], for: UIControlState.normal)
         
         self.sortSelectedEvents()
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.tapImageView.stopBlink()
         
     }
     
@@ -184,5 +196,32 @@ extension ScheduleViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     
+    // MARK: - Support
+    
+    func imageTapped() {
+        
+        print("Tapped")
+        self.sortEventsButton.sendActions(for: .touchUpInside)
+    }
+    
+}
+
+extension UIImageView {
+    
+    func startBlink() {
+        
+        UIView.transition(with: self, duration: 0.8, options: [.autoreverse, .repeat], animations: { 
+            self.alpha = 0.2
+        }, completion: nil)
+        
+        
+    }
+    
+    func stopBlink() {
+        
+        self.alpha = 1
+        
+        layer.removeAllAnimations()
+    }
 }
 

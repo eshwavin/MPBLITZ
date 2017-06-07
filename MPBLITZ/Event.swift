@@ -32,11 +32,9 @@ class Event: NSObject {
         
         var dict = [String: String]()
         
-        for (k,v) in rules.sorted(by: {$0.0 < $1.0}) {
-            dict[k] = v
-        }
         
-        self.rulesAndRegulations = dict
+        
+        self.rulesAndRegulations = rules
         
     }
     

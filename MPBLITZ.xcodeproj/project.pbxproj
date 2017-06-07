@@ -22,11 +22,12 @@
 		116EA0D41EC7A31E00BD459B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0D31EC7A31E00BD459B /* DataManager.swift */; };
 		116EA0D61EC7A33400BD459B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0D51EC7A33400BD459B /* Event.swift */; };
 		116EA0DC1EC7C19000BD459B /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0DB1EC7C19000BD459B /* ScheduleTableViewController.swift */; };
+		1194F2491EE7EF1A001B22BC /* Schools.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1194F2481EE7EF1A001B22BC /* Schools.xcassets */; };
+		11E1B2F11EE7F5AB00267E90 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E1B2F01EE7F5AB00267E90 /* ContactViewController.swift */; };
 		11EFB7AB1EC8C50D0033CC6C /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7AA1EC8C50D0033CC6C /* EventViewController.swift */; };
 		11EFB7AD1EC8E9FD0033CC6C /* SchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7AC1EC8E9FD0033CC6C /* SchoolsTableViewController.swift */; };
 		11EFB7AF1EC8EA0B0033CC6C /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7AE1EC8EA0B0033CC6C /* SchoolsTableViewCell.swift */; };
 		11EFB7B21EC8F1410033CC6C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7B11EC8F1410033CC6C /* AboutViewController.swift */; };
-		11EFB7B41EC8FADB0033CC6C /* Schools.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EFB7B31EC8FADB0033CC6C /* Schools.xcassets */; };
 		11EFB7B61EC8FAE50033CC6C /* Developers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */; };
 		11EFB7B81EC8FBFA0033CC6C /* DeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7B71EC8FBFA0033CC6C /* DeveloperViewController.swift */; };
 		B1F761F30E2FB6625DC09F08 /* Pods_MPBLITZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402EE60083B1F47BEA94F387 /* Pods_MPBLITZ.framework */; };
@@ -76,11 +77,12 @@
 		116EA0D31EC7A31E00BD459B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		116EA0D51EC7A33400BD459B /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		116EA0DB1EC7C19000BD459B /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
+		1194F2481EE7EF1A001B22BC /* Schools.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Schools.xcassets; sourceTree = "<group>"; };
+		11E1B2F01EE7F5AB00267E90 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		11EFB7AA1EC8C50D0033CC6C /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		11EFB7AC1EC8E9FD0033CC6C /* SchoolsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewController.swift; sourceTree = "<group>"; };
 		11EFB7AE1EC8EA0B0033CC6C /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
 		11EFB7B11EC8F1410033CC6C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		11EFB7B31EC8FADB0033CC6C /* Schools.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Schools.xcassets; sourceTree = "<group>"; };
 		11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Developers.xcassets; sourceTree = "<group>"; };
 		11EFB7B71EC8FBFA0033CC6C /* DeveloperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperViewController.swift; sourceTree = "<group>"; };
 		1EC0200DE455F993CA26D14F /* Pods-MPBLITZ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPBLITZ.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPBLITZ/Pods-MPBLITZ.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,8 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				116EA08F1EBF843900BD459B /* AppDelegate.swift */,
-				11EFB7B11EC8F1410033CC6C /* AboutViewController.swift */,
-				11EFB7B71EC8FBFA0033CC6C /* DeveloperViewController.swift */,
+				11E1B2F21EE7F5B300267E90 /* Chindi */,
 				11EFB7B01EC8EA140033CC6C /* Schools */,
 				116EA0D71EC7A70200BD459B /* Schedule */,
 				116EA0CC1EBF8B0A00BD459B /* Reachability */,
@@ -190,7 +191,7 @@
 			children = (
 				116EA0CB1EBF8B0300BD459B /* Utils */,
 				116EA0981EBF843900BD459B /* Assets.xcassets */,
-				11EFB7B31EC8FADB0033CC6C /* Schools.xcassets */,
+				1194F2481EE7EF1A001B22BC /* Schools.xcassets */,
 				11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */,
 				116EA0C11EBF882400BD459B /* GoogleService-Info.plist */,
 				116EA09D1EBF843900BD459B /* Info.plist */,
@@ -252,6 +253,16 @@
 				116EA0D11EC7A1EA00BD459B /* ScheduleCollectionViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		11E1B2F21EE7F5B300267E90 /* Chindi */ = {
+			isa = PBXGroup;
+			children = (
+				11EFB7B11EC8F1410033CC6C /* AboutViewController.swift */,
+				11EFB7B71EC8FBFA0033CC6C /* DeveloperViewController.swift */,
+				11E1B2F01EE7F5AB00267E90 /* ContactViewController.swift */,
+			);
+			name = Chindi;
 			sourceTree = "<group>";
 		};
 		11EFB7B01EC8EA140033CC6C /* Schools */ = {
@@ -407,8 +418,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EFB7B61EC8FAE50033CC6C /* Developers.xcassets in Resources */,
+				1194F2491EE7EF1A001B22BC /* Schools.xcassets in Resources */,
 				116EA09C1EBF843900BD459B /* LaunchScreen.storyboard in Resources */,
-				11EFB7B41EC8FADB0033CC6C /* Schools.xcassets in Resources */,
 				116EA0C21EBF882400BD459B /* GoogleService-Info.plist in Resources */,
 				116EA0991EBF843900BD459B /* Assets.xcassets in Resources */,
 				116EA0971EBF843900BD459B /* Main.storyboard in Resources */,
@@ -588,6 +599,7 @@
 				11EFB7B21EC8F1410033CC6C /* AboutViewController.swift in Sources */,
 				11EFB7AF1EC8EA0B0033CC6C /* SchoolsTableViewCell.swift in Sources */,
 				11EFB7B81EC8FBFA0033CC6C /* DeveloperViewController.swift in Sources */,
+				11E1B2F11EE7F5AB00267E90 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
