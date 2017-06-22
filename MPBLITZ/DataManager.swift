@@ -21,5 +21,39 @@ class DataManager: NSObject {
         }, withCancel: inCaseOfError)
         
     }
+    
+    func isSchoolsUpdated() -> Bool {
+        
+        var returnVal = true
+        FIRDatabase.database().reference().child("schools").child("updated").observe(.value, with: { (snapshot) in
+            
+            if !(snapshot.value is NSNull) {
+                
+                let value = snapshot.value! as! String
+                
+                if value != "Y" {
+                    returnVal = false
+                }
+                
+            }
+            
+        })
+        return returnVal
+        
+    }
+    
+    func getSchools(completion: @escaping (_ snapshot: FIRDataSnapshot) -> Void, inCaseOfError: @escaping (_ error: Error) -> Void) {
+        
+        if !self.isSchoolsUpdated() {
+            return
+        }
+        
+        FIRDatabase.database().reference().child("schools").observe(.value, with: { (snapshot) in
+            
+            completion(snapshot)
+            
+        }, withCancel: inCaseOfError)
+        
+    }
 
 }

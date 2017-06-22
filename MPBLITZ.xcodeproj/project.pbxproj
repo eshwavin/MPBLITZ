@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110557191EFBE69500744739 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110557181EFBE69500744739 /* School.swift */; };
 		116EA0901EBF843900BD459B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA08F1EBF843900BD459B /* AppDelegate.swift */; };
 		116EA0971EBF843900BD459B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116EA0951EBF843900BD459B /* Main.storyboard */; };
 		116EA0991EBF843900BD459B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116EA0981EBF843900BD459B /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		05DF16EBDC5447AC41D0842E /* Pods-MPBLITZTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPBLITZTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPBLITZTests/Pods-MPBLITZTests.release.xcconfig"; sourceTree = "<group>"; };
+		110557181EFBE69500744739 /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		116EA08C1EBF843900BD459B /* MPBLITZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPBLITZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116EA08F1EBF843900BD459B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		116EA0961EBF843900BD459B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				11EFB7AC1EC8E9FD0033CC6C /* SchoolsTableViewController.swift */,
+				110557181EFBE69500744739 /* School.swift */,
 				11EFB7AE1EC8EA0B0033CC6C /* SchoolsTableViewCell.swift */,
 			);
 			name = Schools;
@@ -600,6 +603,7 @@
 				11EFB7AF1EC8EA0B0033CC6C /* SchoolsTableViewCell.swift in Sources */,
 				11EFB7B81EC8FBFA0033CC6C /* DeveloperViewController.swift in Sources */,
 				11E1B2F11EE7F5AB00267E90 /* ContactViewController.swift in Sources */,
+				110557191EFBE69500744739 /* School.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

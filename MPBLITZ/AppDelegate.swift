@@ -10,10 +10,11 @@ import UIKit
 import Firebase
 import FirebaseMessaging
 import UserNotifications
+import RealmSwift
 
 var reachability: Reachability?
 var reachabilityStatus = ""
-
+let realm = try! Realm()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {

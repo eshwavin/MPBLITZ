@@ -11,6 +11,7 @@ target 'MPBLITZ' do
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
+  pod 'RealmSwift'
 
   target 'MPBLITZTests' do
     inherit! :search_paths

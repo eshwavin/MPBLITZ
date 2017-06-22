@@ -28,7 +28,6 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.view.backgroundColor = themeColor
         self.navigationController?.navigationBar.barTintColor = themeColor
@@ -42,9 +41,13 @@ class ScheduleViewController: UIViewController {
 
         self.backgroundImageView.backgroundColor = UIColor.black
         
+        // reachability
+        
         DataManager().getEvents(completion: getData, inCaseOfError: inCaseOfError)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(ScheduleViewController.reachabilityChanged), name: NSNotification.Name(rawValue: "ReachStatusChanged"), object: nil)
         
+        self.reachabilityChanged()
         
     }
     
@@ -202,6 +205,19 @@ extension ScheduleViewController: UICollectionViewDataSource, UICollectionViewDe
         
         print("Tapped")
         self.sortEventsButton.sendActions(for: .touchUpInside)
+    }
+    
+    // MARK: - Reachability
+    
+    func reachabilityChanged() {
+        if reachabilityStatus == NOACCESS {
+            DispatchQueue.main.async {
+                self.present(noInternetAccessAlert(), animated: true, completion: nil)
+            }
+        }
+        else {
+            DataManager().getEvents(completion: getData, inCaseOfError: inCaseOfError)
+        }
     }
     
 }

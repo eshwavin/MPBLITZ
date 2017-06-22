@@ -7,30 +7,58 @@
 //
 
 import UIKit
+import RealmSwift
+import FirebaseDatabase
+import FirebaseStorage
 
 class SchoolsTableViewController: UITableViewController {
     
-    let schools = ["School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School", "School"]
+    let schools: [School] = []
     
-    let taglines = ["Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline", "Tagline"]
+    var messageLabel: UILabel = UILabel()
+    var loaded = false
+    
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "Background2"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "Background2"))
-        imageView.frame = self.tableView.frame
-        self.tableView.backgroundView = imageView
+        
+        self.imageView.frame = self.tableView.frame
+        self.tableView.backgroundView = self.imageView
+        
+        
+        self.messageLabel.textColor = UIColor.white
+        self.messageLabel.numberOfLines = 0
+        self.messageLabel.textAlignment = .center
+        self.messageLabel.font = UIFont(name: "Avenir Medium", size: 20)
+        self.messageLabel.sizeToFit()
+        self.messageLabel.backgroundColor = UIColor.clear
+        
+        self.messageLabel.alpha = 0.0
+        self.imageView.addSubview(messageLabel)
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.view.backgroundColor = themeColor
         self.navigationController?.navigationBar.barTintColor = themeColor
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
+        // reachability
         
+        NotificationCenter.default.addObserver(self, selector: #selector(SchoolsTableViewController.reachabilityChanged), name: NSNotification.Name(rawValue: "ReachStatusChanged"), object: nil)
         
+        self.reachabilityChanged()
+
         
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        self.messageLabel.frame = CGRect(x: 0.0, y: 0.0, width: self.tableView.frame.width, height: self.tableView.frame.height)
+    
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,7 +68,21 @@ class SchoolsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        
+        if self.schools.count == 0 {
+            self.messageLabel.text = self.loaded ? "School list has not been compiled yet" : "Loading..."
+            
+            
+            self.messageLabel.alpha = 1.0
+            
+            return 0
+
+        }
+        else {
+            self.messageLabel.alpha = 0.0
+            return 1
+        }
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,9 +94,14 @@ class SchoolsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "schoolsCell", for: indexPath) as! SchoolsTableViewCell
 
-        cell.schoolLabel.text = self.schools[indexPath.row]
-        cell.schoolTagLabel.text = self.taglines[indexPath.row]
-        cell.schoolImageView.image = UIImage(named: self.schools[indexPath.row].lowercased())
+        cell.schoolLabel.text = self.schools[indexPath.row].name
+        cell.schoolTagLabel.text = self.schools[indexPath.row].tagline
+        
+        cell.schoolImageView.image = nil
+        
+        if let data = self.schools[indexPath.row].image  {
+            cell.schoolImageView.image = UIImage(data: data as Data)
+        }
         
         cell.schoolImageView.layer.cornerRadius = cell.schoolImageView.frame.height / 2.0
 
@@ -75,11 +122,67 @@ class SchoolsTableViewController: UITableViewController {
         cell.layer.shadowOffset = CGSize(width: 0, height: 0)
         UIView.commitAnimations()
         
+    }
+    
+    // MARK: - Reachability
+    
+    func reachabilityChanged() {
+        if reachabilityStatus == NOACCESS {
+            DispatchQueue.main.async {
+                self.present(noInternetAccessAlert(), animated: true, completion: nil)
+            }
+        }
+        else {
+            if realm.objects(School.self).count == 0 {
+                DataManager().getSchools(completion: completion, inCaseOfError: inCaseOfError)
+            }
+        }
+    }
+
+    
+    // MARK: - Get Data
+    
+    func completion(snaphshot: FIRDataSnapshot) {
         
-        (cell as! SchoolsTableViewCell).schoolImageView.image = nil
-        (cell as! SchoolsTableViewCell).schoolImageView.image = UIImage(named: self.schools[indexPath.row].lowercased())
+        if !(snaphshot.value is NSNull) {
+            
+            let value = snaphshot.value as! NSDictionary
+            
+            for data in value {
+                let dataDict = data.value as! [String : String]
+                
+                let school = School()
+                
+                school.name = dataDict["name"]!
+                school.tagline = dataDict["tagline"]!
+                school.imageName = dataDict["imageName"]!
+                
+                if dataDict["imageUpdated"] == "Y" {
+                    let storageReference = FIRStorage.storage().reference()
+                    storageReference.child("schools").child(school.imageName).data(withMaxSize: 1024 * 1024, completion: { (data, error) in
+                        
+                        if error == nil {
+                            school.image = data! as NSData
+                            
+                            try! realm.write {
+                                realm.add(school, update: true)
+                            }
+                            
+                        }
+                        
+                    })
+                }
+                
+            }
+            
+        }
+        self.loaded = true
+        self.tableView.reloadData()
         
-        
+    }
+    
+    func inCaseOfError(error: Error) {
+        self.present(showAlert("Oops", message: "There was some error loading the data"), animated: true, completion: nil)
     }
     
 

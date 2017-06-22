@@ -30,9 +30,6 @@ class Event: NSObject {
         
         let rules = value["rulesAndRegulations"] as! [String: String]
         
-        var dict = [String: String]()
-        
-        
         
         self.rulesAndRegulations = rules
         

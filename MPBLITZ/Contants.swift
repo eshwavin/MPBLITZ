@@ -22,6 +22,14 @@ let themeColor = color(red: 225, green: 76, blue: 74, alpha: 1.0)
 let onlineColor = UIColor.white
 let offlineColor = color(red: 5, green: 48, blue: 25, alpha: 1.0)
 
+func showAlert(_ title: String!, message: String!) -> UIAlertController {
+    
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+    return alertController
+}
+
+
 // MARK: - Reachability
 
 let WIFI = "WIFI Available"
@@ -29,6 +37,10 @@ let WIFI = "WIFI Available"
 let NOACCESS = "No Internet Access"
 
 let WWAN = "Cellular Access Available"
+
+func noInternetAccessAlert() -> UIAlertController {
+    return showAlert("No internet access!", message: "Please connect to the internet and try again")
+}
 
 func getGradeintLayer(with frame: CGRect) -> CAGradientLayer {
     
