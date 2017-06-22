@@ -22,31 +22,29 @@ class DataManager: NSObject {
         
     }
     
-    func isSchoolsUpdated() -> Bool {
+    func isSchoolsUpdated(completion: @escaping (_ snapshot: FIRDataSnapshot) -> Void, ifNot: @escaping () -> Void, inCaseOfError: @escaping (_ error: Error) -> Void)  {
         
-        var returnVal = true
-        FIRDatabase.database().reference().child("schools").child("updated").observe(.value, with: { (snapshot) in
-            
+        FIRDatabase.database().reference().child("schoolsUpdated").observeSingleEvent(of: .value, with: { (snapshot) in
             if !(snapshot.value is NSNull) {
                 
                 let value = snapshot.value! as! String
                 
-                if value != "Y" {
-                    returnVal = false
+                if value == "Y" {
+                    self.getSchools(completion: completion, inCaseOfError: inCaseOfError)
+                }
+                else {
+                    ifNot()
                 }
                 
             }
             
         })
-        return returnVal
+        
         
     }
     
     func getSchools(completion: @escaping (_ snapshot: FIRDataSnapshot) -> Void, inCaseOfError: @escaping (_ error: Error) -> Void) {
         
-        if !self.isSchoolsUpdated() {
-            return
-        }
         
         FIRDatabase.database().reference().child("schools").observe(.value, with: { (snapshot) in
             

@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>427073548905-dm41imj8i6p1uvf5u8c3lqh0rdtomcm7.apps.googleusercontent.com</string>
+	<string>652276202930-529565auuq3keel6iil3h2f1g50469gq.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.427073548905-dm41imj8i6p1uvf5u8c3lqh0rdtomcm7</string>
+	<string>com.googleusercontent.apps.652276202930-529565auuq3keel6iil3h2f1g50469gq</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBko0CORuaGsbvLGVkZ3J0GYguuuY2CUBY</string>
+	<string>AIzaSyB2NNpik_Z7rqwe7uv7ft6OjR0QPl70Has</string>
 	<key>GCM_SENDER_ID</key>
-	<string>427073548905</string>
+	<string>652276202930</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.mpbfhss.MPBLITZ</string>
 	<key>PROJECT_ID</key>
-	<string>mpblitz-685e7</string>
+	<string>mpblitz-a1d75</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mpblitz-685e7.appspot.com</string>
+	<string>mpblitz-a1d75.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:427073548905:ios:cdf61fba780f643d</string>
+	<string>1:652276202930:ios:cdf61fba780f643d</string>
 	<key>DATABASE_URL</key>
-	<string>https://mpblitz-685e7.firebaseio.com</string>
+	<string>https://mpblitz-a1d75.firebaseio.com</string>
 </dict>
 </plist>

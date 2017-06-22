@@ -13,7 +13,7 @@ import FirebaseStorage
 
 class SchoolsTableViewController: UITableViewController {
     
-    let schools: [School] = []
+    var schools: [School] = []
     
     var messageLabel: UILabel = UILabel()
     var loaded = false
@@ -104,6 +104,7 @@ class SchoolsTableViewController: UITableViewController {
         }
         
         cell.schoolImageView.layer.cornerRadius = cell.schoolImageView.frame.height / 2.0
+        cell.schoolImageView.clipsToBounds = true
 
         return cell
     }
@@ -133,23 +134,48 @@ class SchoolsTableViewController: UITableViewController {
             }
         }
         else {
+            
             if realm.objects(School.self).count == 0 {
                 DataManager().getSchools(completion: completion, inCaseOfError: inCaseOfError)
             }
+            else {
+                DataManager().isSchoolsUpdated(completion: completion, ifNot: internalDatabaseLoad, inCaseOfError: inCaseOfError)
+            }
+            
+            
         }
     }
 
     
     // MARK: - Get Data
     
+    func internalDatabaseLoad() {
+        
+        self.schools = []
+        
+        self.messageLabel.alpha = 0.0
+        
+        for object in realm.objects(School.self) {
+            self.schools.append(object)
+        }
+        self.tableView.reloadData()
+        
+    }
+    
     func completion(snaphshot: FIRDataSnapshot) {
+        
+        self.schools = []
+        
+        try! realm.write {
+            realm.delete(realm.objects(School.self))
+        }
         
         if !(snaphshot.value is NSNull) {
             
-            let value = snaphshot.value as! NSDictionary
+            let value = snaphshot.value as! [String: AnyObject]
             
-            for data in value {
-                let dataDict = data.value as! [String : String]
+            for (_, data) in value {
+                let dataDict = data as! [String : String]
                 
                 let school = School()
                 
@@ -157,8 +183,8 @@ class SchoolsTableViewController: UITableViewController {
                 school.tagline = dataDict["tagline"]!
                 school.imageName = dataDict["imageName"]!
                 
-                if dataDict["imageUpdated"] == "Y" {
-                    let storageReference = FIRStorage.storage().reference()
+                if dataDict["imageUpdated"]! == "Y" {
+                    let storageReference = FIRStorage.storage().reference(forURL: "gs://mpblitz-a1d75.appspot.com")
                     storageReference.child("schools").child(school.imageName).data(withMaxSize: 1024 * 1024, completion: { (data, error) in
                         
                         if error == nil {
@@ -166,8 +192,14 @@ class SchoolsTableViewController: UITableViewController {
                             
                             try! realm.write {
                                 realm.add(school, update: true)
+                                self.schools.append(school)
+                                self.loaded = true
+                                self.tableView.reloadData()
                             }
                             
+                        }
+                        else {
+                            print(error?.localizedDescription)
                         }
                         
                     })
@@ -176,8 +208,7 @@ class SchoolsTableViewController: UITableViewController {
             }
             
         }
-        self.loaded = true
-        self.tableView.reloadData()
+        
         
     }
     

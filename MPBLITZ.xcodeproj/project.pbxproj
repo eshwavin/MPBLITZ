@@ -14,7 +14,6 @@
 		116EA09C1EBF843900BD459B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116EA09A1EBF843900BD459B /* LaunchScreen.storyboard */; };
 		116EA0A71EBF843900BD459B /* MPBLITZTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0A61EBF843900BD459B /* MPBLITZTests.swift */; };
 		116EA0B21EBF843900BD459B /* MPBLITZUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0B11EBF843900BD459B /* MPBLITZUITests.swift */; };
-		116EA0C21EBF882400BD459B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 116EA0C11EBF882400BD459B /* GoogleService-Info.plist */; };
 		116EA0C41EBF890200BD459B /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0C31EBF890200BD459B /* Contants.swift */; };
 		116EA0C61EBF891A00BD459B /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0C51EBF891A00BD459B /* ScheduleViewController.swift */; };
 		116EA0CA1EBF8AF800BD459B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0C91EBF8AF800BD459B /* Reachability.m */; };
@@ -31,6 +30,7 @@
 		11EFB7B21EC8F1410033CC6C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7B11EC8F1410033CC6C /* AboutViewController.swift */; };
 		11EFB7B61EC8FAE50033CC6C /* Developers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */; };
 		11EFB7B81EC8FBFA0033CC6C /* DeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7B71EC8FBFA0033CC6C /* DeveloperViewController.swift */; };
+		11F14FD71EFC294600BE17B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11F14FD61EFC294600BE17B0 /* GoogleService-Info.plist */; };
 		B1F761F30E2FB6625DC09F08 /* Pods_MPBLITZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402EE60083B1F47BEA94F387 /* Pods_MPBLITZ.framework */; };
 		BC0D35ACC2115E64B1005424 /* Pods_MPBLITZUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208E9FE488BDE75B432C990F /* Pods_MPBLITZUITests.framework */; };
 		F2759D2D3ED478067A0D412A /* Pods_MPBLITZTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35BD07CB196174CE8D37F6F7 /* Pods_MPBLITZTests.framework */; };
@@ -68,7 +68,6 @@
 		116EA0AD1EBF843900BD459B /* MPBLITZUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MPBLITZUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		116EA0B11EBF843900BD459B /* MPBLITZUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPBLITZUITests.swift; sourceTree = "<group>"; };
 		116EA0B31EBF843900BD459B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		116EA0C11EBF882400BD459B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		116EA0C31EBF890200BD459B /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		116EA0C51EBF891A00BD459B /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		116EA0C71EBF8AF800BD459B /* MPBLITZ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MPBLITZ-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		11EFB7B11EC8F1410033CC6C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Developers.xcassets; sourceTree = "<group>"; };
 		11EFB7B71EC8FBFA0033CC6C /* DeveloperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperViewController.swift; sourceTree = "<group>"; };
+		11F14FD61EFC294600BE17B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EC0200DE455F993CA26D14F /* Pods-MPBLITZ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPBLITZ.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPBLITZ/Pods-MPBLITZ.release.xcconfig"; sourceTree = "<group>"; };
 		208E9FE488BDE75B432C990F /* Pods_MPBLITZUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MPBLITZUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BD07CB196174CE8D37F6F7 /* Pods_MPBLITZTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MPBLITZTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +195,7 @@
 				116EA0981EBF843900BD459B /* Assets.xcassets */,
 				1194F2481EE7EF1A001B22BC /* Schools.xcassets */,
 				11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */,
-				116EA0C11EBF882400BD459B /* GoogleService-Info.plist */,
+				11F14FD61EFC294600BE17B0 /* GoogleService-Info.plist */,
 				116EA09D1EBF843900BD459B /* Info.plist */,
 			);
 			name = Resources;
@@ -423,9 +423,9 @@
 				11EFB7B61EC8FAE50033CC6C /* Developers.xcassets in Resources */,
 				1194F2491EE7EF1A001B22BC /* Schools.xcassets in Resources */,
 				116EA09C1EBF843900BD459B /* LaunchScreen.storyboard in Resources */,
-				116EA0C21EBF882400BD459B /* GoogleService-Info.plist in Resources */,
 				116EA0991EBF843900BD459B /* Assets.xcassets in Resources */,
 				116EA0971EBF843900BD459B /* Main.storyboard in Resources */,
+				11F14FD71EFC294600BE17B0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
