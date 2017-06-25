@@ -199,7 +199,7 @@ class SchoolsTableViewController: UITableViewController {
                             
                         }
                         else {
-                            print(error?.localizedDescription)
+                            print(error?.localizedDescription ?? "Error")
                         }
                         
                     })
@@ -215,6 +215,8 @@ class SchoolsTableViewController: UITableViewController {
     func inCaseOfError(error: Error) {
         self.present(showAlert("Oops", message: "There was some error loading the data"), animated: true, completion: nil)
     }
+    
+    
     
 
     /*

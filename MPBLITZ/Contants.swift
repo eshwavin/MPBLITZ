@@ -16,7 +16,7 @@ func color(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UICol
     
 }
 
-let themeColor = color(red: 225, green: 76, blue: 74, alpha: 1.0)
+let themeColor = color(red: 128, green: 128, blue: 128, alpha: 1.0)
 //let themeColor2 = color(red: 255, green: 45, blue: 85, alpha: 1.0)
 
 let onlineColor = UIColor.white

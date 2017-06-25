@@ -22,7 +22,7 @@
 		116EA0D41EC7A31E00BD459B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0D31EC7A31E00BD459B /* DataManager.swift */; };
 		116EA0D61EC7A33400BD459B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0D51EC7A33400BD459B /* Event.swift */; };
 		116EA0DC1EC7C19000BD459B /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EA0DB1EC7C19000BD459B /* ScheduleTableViewController.swift */; };
-		1194F2491EE7EF1A001B22BC /* Schools.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1194F2481EE7EF1A001B22BC /* Schools.xcassets */; };
+		1194F2491EE7EF1A001B22BC /* TabBarIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1194F2481EE7EF1A001B22BC /* TabBarIcons.xcassets */; };
 		11E1B2F11EE7F5AB00267E90 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E1B2F01EE7F5AB00267E90 /* ContactViewController.swift */; };
 		11EFB7AB1EC8C50D0033CC6C /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7AA1EC8C50D0033CC6C /* EventViewController.swift */; };
 		11EFB7AD1EC8E9FD0033CC6C /* SchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7AC1EC8E9FD0033CC6C /* SchoolsTableViewController.swift */; };
@@ -56,6 +56,7 @@
 /* Begin PBXFileReference section */
 		05DF16EBDC5447AC41D0842E /* Pods-MPBLITZTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPBLITZTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPBLITZTests/Pods-MPBLITZTests.release.xcconfig"; sourceTree = "<group>"; };
 		110557181EFBE69500744739 /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		115C3B751EFF4E6B000A755A /* MPBLITZ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MPBLITZ.entitlements; sourceTree = "<group>"; };
 		116EA08C1EBF843900BD459B /* MPBLITZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPBLITZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116EA08F1EBF843900BD459B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		116EA0961EBF843900BD459B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +79,7 @@
 		116EA0D31EC7A31E00BD459B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		116EA0D51EC7A33400BD459B /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		116EA0DB1EC7C19000BD459B /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
-		1194F2481EE7EF1A001B22BC /* Schools.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Schools.xcassets; sourceTree = "<group>"; };
+		1194F2481EE7EF1A001B22BC /* TabBarIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBarIcons.xcassets; sourceTree = "<group>"; };
 		11E1B2F01EE7F5AB00267E90 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		11EFB7AA1EC8C50D0033CC6C /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		11EFB7AC1EC8E9FD0033CC6C /* SchoolsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		116EA08E1EBF843900BD459B /* MPBLITZ */ = {
 			isa = PBXGroup;
 			children = (
+				115C3B751EFF4E6B000A755A /* MPBLITZ.entitlements */,
 				116EA08F1EBF843900BD459B /* AppDelegate.swift */,
 				11E1B2F21EE7F5B300267E90 /* Chindi */,
 				11EFB7B01EC8EA140033CC6C /* Schools */,
@@ -193,7 +195,7 @@
 			children = (
 				116EA0CB1EBF8B0300BD459B /* Utils */,
 				116EA0981EBF843900BD459B /* Assets.xcassets */,
-				1194F2481EE7EF1A001B22BC /* Schools.xcassets */,
+				1194F2481EE7EF1A001B22BC /* TabBarIcons.xcassets */,
 				11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */,
 				11F14FD61EFC294600BE17B0 /* GoogleService-Info.plist */,
 				116EA09D1EBF843900BD459B /* Info.plist */,
@@ -380,6 +382,11 @@
 						DevelopmentTeam = S2LV3T7DFP;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					116EA0A11EBF843900BD459B = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -421,7 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EFB7B61EC8FAE50033CC6C /* Developers.xcassets in Resources */,
-				1194F2491EE7EF1A001B22BC /* Schools.xcassets in Resources */,
+				1194F2491EE7EF1A001B22BC /* TabBarIcons.xcassets in Resources */,
 				116EA09C1EBF843900BD459B /* LaunchScreen.storyboard in Resources */,
 				116EA0991EBF843900BD459B /* Assets.xcassets in Resources */,
 				116EA0971EBF843900BD459B /* Main.storyboard in Resources */,
@@ -757,6 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MPBLITZ/MPBLITZ.entitlements;
 				DEVELOPMENT_TEAM = S2LV3T7DFP;
 				INFOPLIST_FILE = MPBLITZ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -775,6 +783,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MPBLITZ/MPBLITZ.entitlements;
 				DEVELOPMENT_TEAM = S2LV3T7DFP;
 				INFOPLIST_FILE = MPBLITZ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

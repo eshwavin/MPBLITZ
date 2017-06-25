@@ -24,10 +24,12 @@ class DataManager: NSObject {
     
     func isSchoolsUpdated(completion: @escaping (_ snapshot: FIRDataSnapshot) -> Void, ifNot: @escaping () -> Void, inCaseOfError: @escaping (_ error: Error) -> Void)  {
         
-        FIRDatabase.database().reference().child("schoolsUpdated").observeSingleEvent(of: .value, with: { (snapshot) in
+        FIRDatabase.database().reference().child("schoolsUpdated").observe(.value, with: { (snapshot) in
             if !(snapshot.value is NSNull) {
                 
                 let value = snapshot.value! as! String
+                
+                print("Val", value)
                 
                 if value == "Y" {
                     self.getSchools(completion: completion, inCaseOfError: inCaseOfError)
@@ -37,6 +39,10 @@ class DataManager: NSObject {
                 }
                 
             }
+            
+        })
+        
+        FIRDatabase.database().reference().child("schoolsUpdated").observeSingleEvent(of: .value, with: { (snapshot) in
             
         })
         

@@ -341,7 +341,7 @@
         <scene sceneID="PS6-vO-I7s">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oYO-Sh-mea" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="Events" selectedImage="Events 2" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IfA-xq-2Bm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -365,7 +365,7 @@
         <scene sceneID="IL7-Sd-jTJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vb3-qp-J2t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schools" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Schools" image="Schools" selectedImage="Schools 2" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pnU-lJ-uE4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -502,7 +502,7 @@
         <scene sceneID="dum-gm-NWZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xVi-qt-0wR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About Us" id="bkr-Mi-WQM"/>
+                    <tabBarItem key="tabBarItem" title="About Us" image="About Us" selectedImage="About Us 2" id="bkr-Mi-WQM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NTt-U6-q43">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -668,9 +668,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qY3-2p-IYX">
                                 <rect key="frame" x="16" y="235.5" width="343" height="36"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="+919831712200">
-                                    <color key="titleColor" red="0.88235294119999996" green="0.29803921570000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.46133416256710291" green="0.39020658428713251" blue="0.47831764459609982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="call:" destination="s2g-YD-DFO" eventType="touchUpInside" id="Teu-7k-Vyn"/>
@@ -684,7 +684,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxZ-7Y-z4V">
                                 <rect key="frame" x="16" y="311" width="343" height="35.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="+919748363266">
                                     <color key="titleColor" red="0.88235294119999996" green="0.29803921570000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -694,7 +694,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWA-aD-PLj">
                                 <rect key="frame" x="16" y="386.5" width="343" height="35.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="+919564191888">
                                     <color key="titleColor" red="0.88235294119999996" green="0.29803921570000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -722,7 +722,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-Q6-umn">
                                 <rect key="frame" x="16" y="572.5" width="343" height="35.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="contact.mpblitz17@gmail.com">
                                     <color key="titleColor" red="0.88235294119999996" green="0.29803921570000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -732,7 +732,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-HH-Z37">
                                 <rect key="frame" x="16" y="461.5" width="343" height="36"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="+918585895616">
                                     <color key="titleColor" red="0.88235294119999996" green="0.29803921570000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -810,7 +810,7 @@
         <scene sceneID="sYG-Kz-za6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ira-55-ZyV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Developers" id="LX0-to-Apa"/>
+                    <tabBarItem key="tabBarItem" title="Developers" image="Developers" selectedImage="Developers 2" id="LX0-to-Apa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i7u-jp-2xE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -833,7 +833,7 @@
         <scene sceneID="fUz-Cd-r2b">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hDu-fP-XBQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contact Us" id="xid-yh-QBn"/>
+                    <tabBarItem key="tabBarItem" title="Contact Us" image="Contact Us" selectedImage="Contact Us 2" id="xid-yh-QBn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x93-Dd-m57">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -856,7 +856,17 @@
     </scenes>
     <resources>
         <image name="About" width="375" height="284"/>
+        <image name="About Us" width="30" height="30"/>
+        <image name="About Us 2" width="30" height="30"/>
         <image name="Background2" width="375" height="667"/>
+        <image name="Contact Us" width="30" height="30"/>
+        <image name="Contact Us 2" width="30" height="30"/>
+        <image name="Developers" width="30" height="30"/>
+        <image name="Developers 2" width="30" height="30"/>
+        <image name="Events" width="30" height="30"/>
+        <image name="Events 2" width="30" height="30"/>
+        <image name="Schools" width="30" height="30"/>
+        <image name="Schools 2" width="30" height="30"/>
         <image name="tap" width="58" height="58"/>
         <image name="vinayak" width="200" height="200"/>
     </resources>
