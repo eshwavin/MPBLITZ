@@ -545,7 +545,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3WD-al-OpP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="siddharth" translatesAutoresizingMaskIntoConstraints="NO" id="3WD-al-OpP">
                                 <rect key="frame" x="122" y="351" width="131" height="131"/>
                                 <color key="backgroundColor" red="0.79441406250000002" green="0.79441406250000002" blue="0.79441406250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -867,6 +867,7 @@
         <image name="Events 2" width="30" height="30"/>
         <image name="Schools" width="30" height="30"/>
         <image name="Schools 2" width="30" height="30"/>
+        <image name="siddharth" width="2248" height="2224"/>
         <image name="tap" width="58" height="58"/>
         <image name="vinayak" width="200" height="200"/>
     </resources>
