@@ -11,7 +11,6 @@ import RealmSwift
 class School: Object {
     
     dynamic var name: String = ""
-    dynamic var tagline: String = ""
     dynamic var imageName: String = ""
     dynamic var image: NSData? = nil
     

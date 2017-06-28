@@ -95,7 +95,6 @@ class SchoolsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "schoolsCell", for: indexPath) as! SchoolsTableViewCell
 
         cell.schoolLabel.text = self.schools[indexPath.row].name
-        cell.schoolTagLabel.text = self.schools[indexPath.row].tagline
         
         cell.schoolImageView.image = nil
         
@@ -180,7 +179,6 @@ class SchoolsTableViewController: UITableViewController {
                 let school = School()
                 
                 school.name = dataDict["name"]!
-                school.tagline = dataDict["tagline"]!
                 school.imageName = dataDict["imageName"]!
                 
                 if dataDict["imageUpdated"]! == "Y" {
@@ -200,6 +198,13 @@ class SchoolsTableViewController: UITableViewController {
                         }
                         else {
                             print(error?.localizedDescription ?? "Error")
+                            school.image = nil
+                            try! realm.write {
+                                realm.add(school, update: true)
+                                self.schools.append(school)
+                                self.loaded = true
+                                self.tableView.reloadData()
+                            }
                         }
                         
                     })

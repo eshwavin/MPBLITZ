@@ -18,7 +18,7 @@ class ScheduleCollectionViewCell: UICollectionViewCell {
     var event: Event? {
         didSet {
             if let event = event {
-                self.imageView.image = UIImage(named: event.name.lowercased())
+                self.imageView.image = UIImage(named: event.imageName.lowercased())
                 self.titleLabel.text = event.name
                 self.descriptionLabel.text = event.eventDescription
             }

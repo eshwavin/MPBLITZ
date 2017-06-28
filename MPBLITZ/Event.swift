@@ -18,6 +18,7 @@ class Event: NSObject {
     let time: String
     let rulesAndRegulations: [String: String]
     let eventDescription: String
+    let imageName: String
     
     init(value: [String: AnyObject]) {
         
@@ -27,6 +28,7 @@ class Event: NSObject {
         self.type = value["type"] as! String
         self.time = value["time"] as! String
         self.eventDescription = value["description"] as! String
+        self.imageName = value["imageName"] as! String
         
         let rules = value["rulesAndRegulations"] as! [String: String]
         

@@ -12,7 +12,6 @@ class SchoolsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var schoolImageView: UIImageView!
     @IBOutlet weak var schoolLabel: UILabel!
-    @IBOutlet weak var schoolTagLabel: UILabel!
     
     let gradientLayer = CAGradientLayer()
     
