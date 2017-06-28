@@ -28,7 +28,6 @@
 		11EFB7AD1EC8E9FD0033CC6C /* SchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7AC1EC8E9FD0033CC6C /* SchoolsTableViewController.swift */; };
 		11EFB7AF1EC8EA0B0033CC6C /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7AE1EC8EA0B0033CC6C /* SchoolsTableViewCell.swift */; };
 		11EFB7B21EC8F1410033CC6C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFB7B11EC8F1410033CC6C /* AboutViewController.swift */; };
-		11EFB7B61EC8FAE50033CC6C /* Developers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */; };
 		11F14FD71EFC294600BE17B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11F14FD61EFC294600BE17B0 /* GoogleService-Info.plist */; };
 		B1F761F30E2FB6625DC09F08 /* Pods_MPBLITZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402EE60083B1F47BEA94F387 /* Pods_MPBLITZ.framework */; };
 		BC0D35ACC2115E64B1005424 /* Pods_MPBLITZUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208E9FE488BDE75B432C990F /* Pods_MPBLITZUITests.framework */; };
@@ -84,7 +83,6 @@
 		11EFB7AC1EC8E9FD0033CC6C /* SchoolsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewController.swift; sourceTree = "<group>"; };
 		11EFB7AE1EC8EA0B0033CC6C /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
 		11EFB7B11EC8F1410033CC6C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Developers.xcassets; sourceTree = "<group>"; };
 		11F14FD61EFC294600BE17B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EC0200DE455F993CA26D14F /* Pods-MPBLITZ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPBLITZ.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPBLITZ/Pods-MPBLITZ.release.xcconfig"; sourceTree = "<group>"; };
 		208E9FE488BDE75B432C990F /* Pods_MPBLITZUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MPBLITZUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,7 +192,6 @@
 				116EA0CB1EBF8B0300BD459B /* Utils */,
 				116EA0981EBF843900BD459B /* Assets.xcassets */,
 				1194F2481EE7EF1A001B22BC /* TabBarIcons.xcassets */,
-				11EFB7B51EC8FAE50033CC6C /* Developers.xcassets */,
 				11F14FD61EFC294600BE17B0 /* GoogleService-Info.plist */,
 				116EA09D1EBF843900BD459B /* Info.plist */,
 			);
@@ -424,7 +421,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11EFB7B61EC8FAE50033CC6C /* Developers.xcassets in Resources */,
 				1194F2491EE7EF1A001B22BC /* TabBarIcons.xcassets in Resources */,
 				116EA09C1EBF843900BD459B /* LaunchScreen.storyboard in Resources */,
 				116EA0991EBF843900BD459B /* Assets.xcassets in Resources */,

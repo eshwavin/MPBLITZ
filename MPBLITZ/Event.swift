@@ -28,6 +28,17 @@ class Event: NSObject {
         self.type = value["type"] as! String
         self.time = value["time"] as! String
         self.eventDescription = value["description"] as! String
+        
+//        if let IN = value["imageName"] {
+//            
+////            self.imageName = value["imageName"] as! String
+//            self.imageName = IN as! String
+//        }
+//        else {
+//            self.imageName = "bandish"
+//            print(value)
+//        }
+        
         self.imageName = value["imageName"] as! String
         
         let rules = value["rulesAndRegulations"] as! [String: String]
